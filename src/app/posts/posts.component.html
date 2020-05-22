@@ -1,0 +1,13 @@
+<mat-card>
+    <h2>Posts by {{userName}}</h2>
+</mat-card>
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+    <mat-expansion-panel *ngFor="let post of posts">
+        <mat-expansion-panel-header>
+            <h3>{{ post.title }}</h3>
+        </mat-expansion-panel-header>
+        <p>
+            {{ post.body }}
+        </p>
+    </mat-expansion-panel>
+</mat-accordion>
